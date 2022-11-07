@@ -6,4 +6,4 @@
 
 - Carlos Retamales
 
-![](https://github.com/CRetamales/Tarea_3/blob/master/github/giphy.gif)
+![](https://github.com/CRetamales/Tarea_6/blob/master/github/giphy.gif)
