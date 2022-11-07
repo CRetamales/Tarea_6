@@ -1,5 +1,4 @@
-
-//Url de la API
+//URL de la API
 let url = "https://pokeapi.co/api/v2/pokemon/";
 
 //Función que obtiene los datos de la API
@@ -10,6 +9,7 @@ async function get_Pokemon(url) {
         let response = await axios.get(url);
         return response.data;
     } catch (error) {
+        // muestra el error en caso de que no se pueda acceder a la API
         console.log(error);
         //retorna un objeto vacio
         return {};
