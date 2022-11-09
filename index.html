@@ -4,17 +4,214 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- AXIOS -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
     <!--Icono -->
     <link rel="icon" href="./assets/img/icono.png">
     <title>Tarea 6</title>
 </head>
 <body>
-    <!-- lista de pokemones -->
-    <ul id="lista-pokemones"></ul>
-    <!-- imagen del pokemon -->
-    <div id="imagen-pokemon"></div>
-    <!-- script -->
+    <div class = "tarea-container">
+        <header class = "tarea-container__header">
+            <h1>TAREA 6 API POKEMONES</h1>
+        </header>
+        <!-- Cards-->
+        <div class = "tarea-container__main">
+            <ul class = "cards">
+                <li class = "cards__item">
+                    <div class = "card">
+                        <div class = "card__content">
+                            <img src = "./assets/img/13.png" alt = "pikachu" class = "card__img">
+                            <div class = "card__title">Pikachu</div>
+                            
+                        </div>
+                    </div>
+                </li>
+                <li class = "cards__item">
+                    <div class = "card">
+                        <div class = "card__content">
+                            <img src = "./assets/img/13.png" alt = "pikachu" class = "card__img">
+                            <div class = "card__title">Pikachu</div>
+                            
+                        </div>
+                    </div>
+                </li>
+                <li class = "cards__item">
+                    <div class = "card">
+                        <div class = "card__content">
+                            <img src = "./assets/img/13.png" alt = "pikachu" class = "card__img">
+                            <div class = "card__title">Pikachu</div>
+                            
+                        </div>
+                    </div>
+                </li>
+                <li class = "cards__item">
+                    <div class = "card">
+                        <div class = "card__content">
+                            <img src = "./assets/img/13.png" alt = "pikachu" class = "card__img">
+                            <div class = "card__title">Pikachu</div>
+                            
+                        </div>
+                    </div>
+                </li>
+                <li class = "cards__item">
+                    <div class = "card">
+                        <div class = "card__content">
+                            <img src = "./assets/img/13.png" alt = "pikachu" class = "card__img">
+                            <div class = "card__title">Pikachu</div>
+                            
+                        </div>
+                    </div>
+                </li>
+                <li class = "cards__item">
+                    <div class = "card">
+                        <div class = "card__content">
+                            <img src = "./assets/img/13.png" alt = "pikachu" class = "card__img">
+                            <div class = "card__title">Pikachu</div>
+                            
+                        </div>
+                    </div>
+                </li>
+                <li class = "cards__item">
+                    <div class = "card">
+                        <div class = "card__content">
+                            <img src = "./assets/img/13.png" alt = "pikachu" class = "card__img">
+                            <div class = "card__title">Pikachu</div>
+                            
+                        </div>
+                    </div>
+                </li>
+                <li class = "cards__item">
+                    <div class = "card">
+                        <div class = "card__content">
+                            <img src = "./assets/img/13.png" alt = "pikachu" class = "card__img">
+                            <div class = "card__title">Pikachu</div>
+                            
+                        </div>
+                    </div>
+                </li>
+                <li class = "cards__item">
+                    <div class = "card">
+                        <div class = "card__content">
+                            <img src = "./assets/img/13.png" alt = "pikachu" class = "card__img">
+                            <div class = "card__title">Pikachu</div>
+                            
+                        </div>
+                    </div>
+                </li>
+                <li class = "cards__item">
+                    <div class = "card">
+                        <div class = "card__content">
+                            <img src = "./assets/img/13.png" alt = "pikachu" class = "card__img">
+                            <div class = "card__title">Pikachu</div>
+                            
+                        </div>
+                    </div>
+                </li>
+                <li class = "cards__item">
+                    <div class = "card">
+                        <div class = "card__content">
+                            <img src = "./assets/img/13.png" alt = "pikachu" class = "card__img">
+                            <div class = "card__title">Pikachu</div>
+                            
+                        </div>
+                    </div>
+                </li>
+                <li class = "cards__item">
+                    <div class = "card">
+                        <div class = "card__content">
+                            <img src = "./assets/img/13.png" alt = "pikachu" class = "card__img">
+                            <div class = "card__title">Pikachu</div>
+                            
+                        </div>
+                    </div>
+                </li>
+                <li class = "cards__item">
+                    <div class = "card">
+                        <div class = "card__content">
+                            <img src = "./assets/img/13.png" alt = "pikachu" class = "card__img">
+                            <div class = "card__title">Pikachu</div>
+                            
+                        </div>
+                    </div>
+                </li>
+                <li class = "cards__item">
+                    <div class = "card">
+                        <div class = "card__content">
+                            <img src = "./assets/img/13.png" alt = "pikachu" class = "card__img">
+                            <div class = "card__title">Pikachu</div>
+                            
+                        </div>
+                    </div>
+                </li>
+                <li class = "cards__item">
+                    <div class = "card">
+                        <div class = "card__content">
+                            <img src = "./assets/img/13.png" alt = "pikachu" class = "card__img">
+                            <div class = "card__title">Pikachu</div>
+                            
+                        </div>
+                    </div>
+                </li>
+                <li class = "cards__item">
+                    <div class = "card">
+                        <div class = "card__content">
+                            <img src = "./assets/img/13.png" alt = "pikachu" class = "card__img">
+                            <div class = "card__title">Pikachu</div>
+                            
+                        </div>
+                    </div>
+                </li>
+                <li class = "cards__item">
+                    <div class = "card">
+                        <div class = "card__content">
+                            <img src = "./assets/img/13.png" alt = "pikachu" class = "card__img">
+                            <div class = "card__title">Pikachu</div>
+                            
+                        </div>
+                    </div>
+                </li>
+                <li class = "cards__item">
+                    <div class = "card">
+                        <div class = "card__content">
+                            <img src = "./assets/img/13.png" alt = "pikachu" class = "card__img">
+                            <div class = "card__title">Pikachu</div>
+                            
+                        </div>
+                    </div>
+                </li>
+                <li class = "cards__item">
+                    <div class = "card">
+                        <div class = "card__content">
+                            <img src = "./assets/img/13.png" alt = "pikachu" class = "card__img">
+                            <div class = "card__title">Pikachu</div>
+                            
+                        </div>
+                    </div>
+                </li>
+                <li class = "cards__item">
+                    <div class = "card">
+                        <div class = "card__content">
+                            <img src = "./assets/img/13.png" alt = "pikachu" class = "card__img">
+                            <div class = "card__title">Pikachu</div>
+                            
+                        </div>
+                    </div>
+                </li>
+            
+                
+                
+                
+
+            </ul>
+        </div> 
+        
+        <div class = "tarea-container__footer">
+            <h2>Autor: Carlos Retamales - Curso de Frontend 2022-2</h2>
+        </div>
+    </div>
     <script type="module" src="./assets/js/script.js"></script>
 </body>
 </html>
