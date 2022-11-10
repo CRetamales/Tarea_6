@@ -30,10 +30,17 @@ async function show_Pokemon_api(url) {
         alert("No se pudo acceder a la API");
         return;
     } else {
+        //* En este caso revisando la API siempre tiene un nombre/url el pokemon
+        //* porque checkeamos eso haciendo peticiones manualmente
+        //* pero en caso de que no tenga nombre/url se puede usar un if
+        //* para revisar si tiene nombre o no y que no sea undefined y así
+        //* evitar errores o que el programa se caiga
+        //* ocurre lo mismo para la imagen, siempre tiene una imagen frontal
+        //* pero en caso de que no tenga se puede usar un if para revisar
+        //* si tiene imagen o no y que no sea undefined.
         pokemon_data = pokemon_data.results;
         pokemon_data.forEach(async pokemon => {
             let pokemon_data = await get_Pokemon(pokemon.url);
-            
             cards.innerHTML = cards.innerHTML + `
             <li class="cards__item">
                 <div class="card">
