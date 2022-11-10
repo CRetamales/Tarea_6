@@ -16,54 +16,34 @@ async function get_Pokemon(url) {
     }
 }
 
+
+
+let cards = document.getElementById("cards");
+
 //Función que muestra los datos de la API
 //Entrada: objeto con los datos de la API
 //Salida: void
 async function show_Pokemon_api(url) {
-    let pokemon = await get_Pokemon(url);
-    console.log(pokemon);
+    let pokemon_data = await get_Pokemon(url);
+    // si pokemon_data es {} no se muestra nada
+    if (Object.keys(pokemon_data).length === 0) {
+        alert("No se pudo acceder a la API");
+        return;
+    } else {
+        pokemon_data = pokemon_data.results;
+        pokemon_data.forEach(async pokemon => {
+            let pokemon_data = await get_Pokemon(pokemon.url);
+            
+            cards.innerHTML = cards.innerHTML + `
+            <li class="cards__item">
+                <div class="card">
+                    <img src="${pokemon_data.sprites.front_default}" alt="${pokemon.name}" class="card__img">
+                    <h2 class="card__title">${pokemon.name}</h2>
+                </div>
+            </li>`;
+        });
+    }
 }
 
-//Llamada a la función show_Pokemon
 show_Pokemon_api(url);
 
-
-// usando el id lista-pokemones para mostrar los datos de la API
-// en el archivo index.html
-let lista = document.getElementById("lista-pokemones");
-let imagen = document.getElementById("imagen-pokemon");
-
-//Función que muestra los datos de la API
-//Entrada: objeto con los datos de la API
-//Salida: void
-async function show_Pokemon_name(url) {
-    let pokemon = await get_Pokemon(url);
-    //console.log(pokemon);
-    let html = "";
-    pokemon.results.forEach(poke => {
-        html += `<li>${poke.name}</li>`;
-    });
-    lista.innerHTML = html;
-}
-
-//Función que accede a cada url de los pokemones y 
-// dado la variable sprite muestra la imagen del pokemon
-//Entrada: objeto con los datos de la API
-//Salida: void
-async function show_Pokemon_image(url) {
-    let pokemon = await get_Pokemon(url);
-    //ahora accedemos a cada url de los pokemones
-    pokemon.results.forEach(async poke => {
-        let pokemon = await get_Pokemon(poke.url);
-        //console.log(pokemon);
-        imagen.innerHTML += `<img src="${pokemon.sprites.front_default}">`;
-        //muestra por consola la url de la imagen
-        console.log(pokemon.sprites.front_default);
-    });
-
-}
-
-
-
-show_Pokemon_name(url);
-show_Pokemon_image(url);
